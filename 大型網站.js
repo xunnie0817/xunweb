@@ -3,6 +3,10 @@ let istext;
 let isacc;
 const company=document.getElementById('company');
 const according=document.getElementById('according');
+let isclick=false;
+const 簡介=document.getElementById('簡介');
+const 產品=document.getElementById('產品');
+const 沿革=document.getElementById('沿革');
 
 if(window.innerWidth>768){
     company.addEventListener("mouseenter", () => {
@@ -148,21 +152,17 @@ if(window.innerWidth>768){
 }
 
 else{
-    let isclick=false;
-    const horizon=document.getElementById('horizon');
-    const 簡介=document.getElementById('簡介')
-    const 產品=document.getElementById('產品')
-    const 沿革=document.getElementById('沿革')
     company.addEventListener('click',()=>{
         if(isclick){
-            簡介.classList.remove('accordingp')
-            產品.classList.remove('accordingp')
-            沿革.classList.remove('accordingp')
+            簡介.classList.remove('accordingp');
+            產品.classList.remove('accordingp');
+            沿革.classList.remove('accordingp');
         }
         else{
-            簡介.classList.add('accordingp')
-            產品.classList.add('accordingp')
-            沿革.classList.add('accordingp')
+            簡介.classList.add('accordingp');
+            產品.classList.add('accordingp');
+            沿革.classList.add('accordingp');
         }
+        isclick=!isclick;
     })
 }

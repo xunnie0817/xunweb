@@ -13,32 +13,21 @@ if(window.innerWidth>768){
         clearTimeout(timeoutId); // 清除任何現存計時器
         isacc = false; // 設置為非激活狀態
         timeoutId = setTimeout(() => {
+            istext=false;
             formid(false); // 隱藏其他區域
             acc(true); // 顯示 according 區域
         }, 200);
     });
-    
     company.addEventListener("mouseleave", () => {
         clearTimeout(timeoutId);
         timeoutId=setTimeout(() => {
             if(!isacc){
                 acc(false);
-            }      
+            }
         }, 400);
     });
+
     
-    according.addEventListener("mouseenter", () => {
-        clearTimeout(timeoutId);
-        isacc=true;
-    });
-    
-    according.addEventListener("mouseleave", () => {
-        clearTimeout(timeoutId);
-        timeoutId=setTimeout(() => {
-            isacc=false;
-            acc(false);
-        }, 400);
-    });
     
     function acc(open){
         const according=document.getElementById('according');
@@ -88,19 +77,6 @@ if(window.innerWidth>768){
             if(!istext){
                 formid(false);
             }
-        }, 400);
-    });
-    
-    document.getElementById("formid").addEventListener("mouseenter", () => {
-        clearTimeout(timeoutId);
-        istext=true;
-    });
-    
-    document.getElementById("formid").addEventListener("mouseleave", () => {
-        clearTimeout(timeoutId);
-        timeoutId=setTimeout(() => {
-            istext=false;
-            formid(false);
         }, 400);
     });
     

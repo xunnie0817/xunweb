@@ -86,21 +86,39 @@
             #company{
                 position: relative;
             }
-            #formid{
-                position: absolute;
-
-            }
             #according{
                 position: absolute;
                 background-color: red;
                 list-style-type: none;
                 margin-top: 0;
-                margin-left: 35%;
-                padding:1%;
+                top: 100%;
+                left: 0;
+                padding:5% 10% 10% 20%;
+                width: 6vw;
+                height: 6vw;
                 line-height: 2rem;
                 border-radius: 1vw;
             }
             #according:empty{
+                display: none;
+            }
+            #product{
+                position: relative;
+            }
+            #formid{
+                position: absolute;
+                background-color: red;
+                list-style-type: none;
+                margin-top: 0;
+                top: 100%;
+                left: 0;
+                padding:10%;
+                width: 14vw;
+                height: 11vw;
+                line-height: 2rem;
+                border-radius: 1vw;
+            }
+            #formid:empty{
                 display: none;
             }
             .list:hover{
@@ -120,16 +138,18 @@
             <a onclick="language()">語言</a>
         </div>
         <div id="horizon">
-            <div id="company">關於我們</div>
+            <div id="company">關於我們
+                <ul id="according">這是我</ul>
+            </div>
             <div class="hidden" id="簡介">公司簡介</div>
             <div class="hidden" id="產品">主要產品</div>
             <div class="hidden" id="沿革">公司沿革</div>
             <div id="news" onclick="news()">最新消息</div>
-            <div id="product"><a id="product">產品簡介</div>
+            <div id="product">產品簡介
+                <div class="" id="formid"></div>
+            </div>
             <div id="contact" onclick="contact()">聯絡我們</div>
         </div>
-        <ul id="according">我在這裡</ul>
-        <ul id="formid"></ul>
         <div id="text">
             <a id="開頭">公司簡介</a>
             <img id="公司圖" src="co.jpg">

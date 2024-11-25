@@ -55,34 +55,6 @@
                 margin: 20px auto;
                 height: auto;
             }
-            @media(max-width:768px){
-                #horizon{
-                    flex-direction: column;
-                }
-                #horizon div{
-                    border-bottom: 2px solid white;
-                }
-                #according,#formid{
-                    display: none;
-                }
-                .content1,.content2{
-                    font-size: 1rem;
-                    margin-right: 5%;
-                    margin-left: 5%;
-                }
-                #公司圖{
-                    max-width: 200px;
-                }
-            }
-            @media(max-width:480px){
-                #lan{
-                    text-align: center;
-                }
-                .content1,.content2{
-                    margin-left: 2%;
-                    margin-right: 2%;
-                }
-            }
             #company{
                 position: relative;
             }
@@ -128,8 +100,48 @@
                 background-color: rgba(150, 150, 150, 1);
                 display: none;
             }
+            .according{
+                display: hidden;
+            }
+            #簡介{
+                background-color: aqua;
+            }
             .accordingp{
-                display: block;
+                display: none;
+            }
+            @media(max-width:768px){
+                #horizon{
+                    flex-direction: column;
+                }
+                #horizon div{
+                    border-bottom: 2px solid white;
+                }
+                #according,#formid{
+                    display: none;
+                }
+                .content1,.content2{
+                    font-size: 1rem;
+                    margin-right: 5%;
+                    margin-left: 5%;
+                }
+                #公司圖{
+                    max-width: 200px;
+                }
+                .according{
+                    display: none;
+                }
+                .hidden{
+                    display: block;
+                }
+            }
+            @media(max-width:480px){
+                #lan{
+                    text-align: center;
+                }
+                .content1,.content2{
+                    margin-left: 2%;
+                    margin-right: 2%;
+                }
             }
         </style>
     </head>
@@ -139,7 +151,7 @@
         </div>
         <div id="horizon">
             <div id="company">關於我們
-                <ul id="according">這是我</ul>
+                <ul id="according"></ul>
             </div>
             <div class="hidden" id="簡介">公司簡介</div>
             <div class="hidden" id="產品">主要產品</div>

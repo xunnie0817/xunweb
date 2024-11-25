@@ -7,7 +7,6 @@ let isclick=false;
 const 簡介=document.getElementById('簡介');
 const 產品=document.getElementById('產品');
 const 沿革=document.getElementById('沿革');
-
 if(window.innerWidth>768){
     company.addEventListener("mouseenter", () => {
         clearTimeout(timeoutId); // 清除任何現存計時器
@@ -126,7 +125,6 @@ if(window.innerWidth>768){
         window.location.href='多層構裝陶瓷基板與傳感器.html';
     }
 }
-
 else{
     company.addEventListener('click',()=>{
         if(isclick){

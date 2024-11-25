@@ -88,9 +88,23 @@
             }
             #formid{
                 position: absolute;
+
             }
             #according{
                 position: absolute;
+                background-color: red;
+                list-style-type: none;
+                margin-top: 0;
+                margin-left: 35%;
+                padding:1%;
+                line-height: 2rem;
+                border-radius: 1vw;
+            }
+            #according:empty{
+                display: none;
+            }
+            .list:hover{
+                cursor: pointer;
             }
             .hidden {
                 background-color: rgba(150, 150, 150, 1);
@@ -114,7 +128,7 @@
             <div id="product"><a id="product">產品簡介</div>
             <div id="contact" onclick="contact()">聯絡我們</div>
         </div>
-        <ul id="according"></ul>
+        <ul id="according">我在這裡</ul>
         <ul id="formid"></ul>
         <div id="text">
             <a id="開頭">公司簡介</a>

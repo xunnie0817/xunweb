@@ -98,7 +98,10 @@
             }
             .hidden {
                 background-color: rgba(150, 150, 150, 1);
-                display: block;
+                display: none;
+            }
+            .according{
+                display: hidden;
             }
             #簡介{
                 background-color: aqua;
@@ -124,6 +127,12 @@
                 #公司圖{
                     max-width: 200px;
                 }
+                .according{
+                    display: none;
+                }
+                .hidden{
+                    display: block;
+                }
             }
             @media(max-width:480px){
                 #lan{
@@ -142,7 +151,7 @@
         </div>
         <div id="horizon">
             <div id="company">關於我們
-                <ul id="according">這是我</ul>
+                <ul id="according"></ul>
             </div>
             <div class="hidden" id="簡介">公司簡介</div>
             <div class="hidden" id="產品">主要產品</div>

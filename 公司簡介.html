@@ -30,9 +30,6 @@
             #horizon div {
                 padding: 8px 18px;
             }
-            #accordingp,#formidp{
-                display: none;
-            }
             #horizon div:hover{
                 cursor: pointer;
             }
@@ -65,8 +62,8 @@
                 #horizon div{
                     border-bottom: 2px solid white;
                 }
-                #accordingp,#formidp{
-                    display: flex;
+                #according,#formid{
+                    display: none;
                 }
                 .content1,.content2{
                     font-size: 1rem;
@@ -95,8 +92,11 @@
             #according{
                 position: absolute;
             }
-            .accordingp{
+            .hidden {
                 display: none;
+            }
+            .accordingp{
+                display: block;
             }
         </style>
     </head>
@@ -106,12 +106,11 @@
         </div>
         <div id="horizon">
             <div id="company">關於我們</div>
-            <div class="accordingp" id="簡介">公司簡介</div>
-            <div class="accordingp" id="產品">主要產品</div>
-            <div class="accordingp" id="沿革">公司沿革</div>
+            <div class="hidden" id="簡介">公司簡介</div>
+            <div class="hidden" id="產品">主要產品</div>
+            <div class="hidden" id="沿革">公司沿革</div>
             <div id="news" onclick="news()">最新消息</div>
             <div id="product"><a id="product">產品簡介</div>
-            <div id="formidp"></div>
             <div id="contact" onclick="contact()">聯絡我們</div>
         </div>
         <ul id="according"></ul>

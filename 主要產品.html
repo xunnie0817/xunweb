@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>科技股份有限公司</title>
+        <link rel="icon" href="OIP.jpg" type="image/jpg">
+        <style>
+            body{
+                margin: 0;
+            }
+            #lan{
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(100, 100, 100, 1);
+                width: 100%;
+                color: white;
+                text-align: right;
+                padding: 5px 10%;
+            }
+            #horizon{
+                display: flex;
+                position: fixed;
+                list-style-type: none;
+                background-color: rgba(200, 200, 200, 1);
+                width: 100%;
+                top: 30px;
+                justify-content: center;
+                padding:0;
+                margin: 0;
+            }
+            li{
+                padding: 8px;
+            }
+            li a{
+                display: inline;
+                padding: 5px 10px;
+            }
+            li a:hover{
+                cursor: pointer;
+            }
+            .formid{
+                position: fixed;
+                top: 51px;
+                left: 20px;
+                max-height: 200px;
+                flex-direction: column;
+                list-style-type: none;
+                padding-left: 0;
+                padding: 5px;
+                max-width: 25%;
+                margin-left:46%;
+                margin-bottom: 30%;
+                border-radius:8px ; 
+            }
+            .according{
+                position: fixed;
+                top: 51px;
+                padding-left: 0;
+                padding-right: 20px;
+                list-style-type: none;
+                margin-left:36%;
+                border-radius:8px ;               
+            }
+            .list{
+                cursor: pointer;
+            } 
+            #text{
+                margin-top:20vh;
+                margin-left:20% ;
+                margin-right: 20%;
+            }
+            #開頭{
+                color: black;
+                font-size:200%;
+                font-weight: 600;
+                padding-left: 5vh;
+            }
+            img{
+                display: block;
+                float: left;
+                padding-left:18vh ;
+                padding-top: 9vh;
+            }
+            .h1{
+                display: block;
+                margin-left: 5px;
+                font-size: 130%;
+                color: aqua;
+                margin-left: 55vh;
+            }
+            #content1{
+                display: block;
+                margin-left: 55vh;
+                font-size: 110%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="lan">
+            <a onclick="language()">語言</a>
+        </div>
+        <ul id="horizon">
+            <li><a id="company">關於我們</a></li>
+            <li><a id="news" onclick="news()">最新消息</a></li>
+            <li><a id="product">產品簡介</a></li>
+            <li><a id="contact" onclick="contact()">聯絡我們</a></li>
+        </ul>
+        <ul id="according"></ul>
+        <ul id="formid"></ul>
+        <div id="text">
+            <a id="開頭">主要產品</a>
+            <img src="co2.jpg">
+            <a class="h1">氧體偵測傳感器:</a>
+            <a id="content1">-偵測內燃機燃油效率、排放尾氣與工廠煙道排放一氧化氮濃度檢測。</a>
+            <a class="h1">陶瓷材料系統:</a>
+            <a id="content1">-特定客製化陶瓷生胚開發及代工製造，同時可提供各種搭配性的導體材料匹配研發。</a>
+            <a class="h1">陶瓷製氧基板:</a>
+            <a id="content1">-與國際大廠合作開發中小型電化學陶瓷氧氣製造機，可提供純度高達99.99%的氧氣，使用在醫療、工業用等有高純度氧氣需求的產業。</a>
+            <a class="h1">多層陶瓷量產設備:</a>
+            <a id="content1">-利用既有的多層陶瓷基板製程技術，開發出具低成本、高產出效能的量產設備。</a>
+            <a class="h1">多層構裝陶瓷基板與傳感器:</a>
+            <a id="content1">-LTCC(低溫共燒陶瓷)陶瓷多層電路板應用於LED、MEMS、 紅外線感測器、重力加速感測器等半導體構裝基板、厚膜氧化鋁基板、陶瓷多層感測元件，利用材料本身的特性與電路設計，配合大數據資料庫的應用，可成為偵測環境中各種變化的感測元件，例如：溫度、壓力、酸鹼值等感測元件。</a>
+        </div>
+        <script src="大型網站.js"></script>
+    </body>
+</html>

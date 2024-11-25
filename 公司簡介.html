@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>科技股份有限公司</title>
+        <link rel="icon" href="OIP.jpg" type="image/jpg">
+        <style>
+            body{
+                margin: 0;
+            }
+            #lan{
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(100, 100, 100, 1);
+                width: 100%;
+                color: white;
+                text-align: right;
+                padding: 5px 10%;
+            }
+            #horizon{
+                display: flex;
+                position: fixed;
+                list-style-type: none;
+                background-color: rgba(200, 200, 200, 1);
+                width: 100%;
+                top: 30px;
+                justify-content: center;
+                padding:0;
+                margin: 0;
+            }
+            li{
+                padding: 8px;
+            }
+            li a{
+                display: inline;
+                padding: 5px 10px;
+            }
+            li a:hover{
+                cursor: pointer;
+            }
+            .formid{
+                position: fixed;
+                top: 51px;
+                left: 20px;
+                max-height: 200px;
+                flex-direction: column;
+                text-align: left;
+                list-style-type: none;
+                padding-left: 0;
+                padding: 5px;
+                max-width: 25%;
+                margin-left:46%;
+                margin-bottom: 30%;
+                border-radius:8px ;
+            }
+            .according{
+                position: fixed;
+                top: 51px;
+                padding-left: 0;
+                padding-right: 20px;
+                list-style-type: none;
+                margin-left:36%;
+                border-radius:8px ;               
+            }
+            #text{
+                margin-top:20vh;
+                margin-left:20% ;
+                margin-right: 20%;
+            }
+            #開頭{
+                padding-left: 15vh ;
+                color: black;
+                font-size:200%;
+                font-weight: 600;
+            }
+            .content1{
+                font-size: 110%;
+                display: block;
+                line-height: 1.5;
+                margin-right: 65vh;
+                margin-left: 15vh;
+                margin-top:1vh ;
+            }
+            .content2{
+                font-size: 110%;
+                display: block;
+                line-height: 1.5;
+                margin-right: 20vh;
+                margin-left: 15vh;
+                margin-top:1vh ;
+            }
+            #公司圖{
+                display: block;
+                float: right;
+                padding-right:20vh ;
+                padding-top: 15vh;
+            }
+            .content3{
+                display: block;
+                margin-left: 70vh;
+                margin-top: 3vh;
+            }
+            .list:hover{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="lan">
+            <a onclick="language()">語言</a>
+        </div>
+        <ul id="horizon">
+            <li><a id="company">關於我們</a></li>
+            <li><a id="news" onclick="news()">最新消息</a></li>
+            <li><a id="product">產品簡介</a></li>
+            <li><a id="contact" onclick="contact()">聯絡我們</a></li>
+        </ul>
+        <ul id="according"></ul>
+        <ul id="formid"></ul>
+        <div id="text">
+            <a id="開頭">公司簡介</a>
+            <img id="公司圖" src="co.jpg">
+            <a class="content1">鋐鑫電光科技股份有限公司(Elit Fine Ceramics CO., Ltd)成立於2005年3月，廠區位於桃園市楊梅區幼獅擴大工業區內，為一家專業精密陶瓷材料研發及產品製造公司。經營團隊深耕精密陶瓷材料科技30餘年，擁有自主的陶瓷複合材料開發技術、陶瓷生胚量產技術、多層陶瓷構裝技術及多層陶瓷生產設備設計開發技術，於2007年榮獲經濟部頒發中小企業創新奬。</a>
+            <a class="content2">因應產業環境改變，鋐鑫已從早期消費性電子、照明等LED產品，升級轉型往高門檻、高產值、高附加價值的尖端電化學陶瓷工藝技術發展，目前主力產品為氧傳感器與氮氧傳感器，其主要功能為偵測內燃機燃油效率與尾氣排放檢測，為全球少數幾家擁有傳感器從材料配方、生胚流延成形、多層陶瓷沖孔/印刷/結合/燒結、總成封裝量產技術的廠商之一。</a>
+            <a class="content2">由於鋐鑫在電化學陶瓷工藝技術的卓越表現，獲得國內外廠商一致肯定，陸續取得與國際大廠在醫療生技、高純氧製造、碳中和、潔淨能源等創新產品的合作機會。其中電化學陶瓷製氧機是目前正在進行的跨國合作項目，鋐鑫負責關鍵材料陶瓷製氧基板的生產，樣品機已通過客戶驗證，未來產品上市後可供應全球醫療與工業用高純度氧氣(純度99.99%)，切入高純氧氣製造與生技醫療市場。</a>
+            <a class="content2">傳感器與陶瓷製氧基板的開發成功奠定了鋐鑫在電化學陶瓷半導體材料產業永續發展的基礎，當前如何解決環境汙染是全世界急迫需要面對的課題，面對2050淨零排放的目標，各國已陸續制定嚴格的碳中和減碳目標與計畫時程表。由於電化學技術應用在碳中和及潔淨能源的發展有非常大機會，所以鋐鑫未來有更重大的願景與使命，尋求與國內外廠商共同合作，整合碳捕捉與電化學固體氧化物電解池 (SOEC) 技術，將 H2O、CO2 或H2O + CO2透過電化學技術分別轉化為 H2、CO 或 H2 + CO（合成氣）；或是透過一系列化學合成進行熱整合，使捕獲的 CO2 和水能夠再循環到合成天然氣或汽油、甲醇或氨等，除了可直接降低二氧化碳排放汙染外，更能進一步抑制使用化石原料所造成的環境汙染，還給大家一個乾淨的地球。</a>
+            
+        </div>
+        <script src="大型網站.js">
+        </script>
+    </body>
+</html>

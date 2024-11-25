@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>科技股份有限公司</title>
+        <link rel="icon" href="OIP.jpg" type="image/jpg">
+        <style>
+            body{
+                margin: 0;
+            }
+            #lan{
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(100, 100, 100, 1);
+                width: 100%;
+                color: white;
+                text-align: right;
+                padding: 5px 10%;
+            }
+            #horizon{
+                display: flex;
+                position: fixed;
+                list-style-type: none;
+                background-color: rgba(200, 200, 200, 1);
+                width: 100%;
+                top: 30px;
+                justify-content: center;
+                padding:0;
+                margin: 0;
+            }
+            li{
+                padding: 8px;
+            }
+            li a{
+                display: inline;
+                padding: 5px 10px;
+            }
+            li a:hover{
+                cursor: pointer;
+            }
+            .formid{
+                position: fixed;
+                top: 51px;
+                left: 20px;
+                max-height: 200px;
+                flex-direction: column;
+                list-style-type: none;
+                padding-left: 0;
+                padding: 5px;
+                max-width: 25%;
+                margin-left:46%;
+                margin-bottom: 30%;
+                border-radius:8px ; 
+            }
+            .according{
+                position: fixed;
+                top: 51px;
+                padding-left: 0;
+                padding-right: 20px;
+                list-style-type: none;
+                margin-left:36%;
+                border-radius:8px ;               
+            }
+            .list{
+                cursor: pointer;
+            }           
+        </style>
+    </head>
+    <body>
+        <div id="lan">
+            <a onclick="language()">語言</a>
+        </div>
+        <ul id="horizon">
+            <li><a id="company">關於我們</a></li>
+            <li><a id="news" onclick="news()">最新消息</a></li>
+            <li><a id="product">產品簡介</a></li>
+            <li><a id="contact" onclick="contact()">聯絡我們</a></li>
+        </ul>
+        <ul id="according"></ul>
+        <ul id="formid"></ul>
+        <script src="大型網站.js"></script>
+    </body>
+</html>

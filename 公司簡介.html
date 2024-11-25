@@ -27,12 +27,11 @@
                 margin: 0;
                 padding: 0;
             }
-            #horizon li {
-                padding: 8px;
+            #horizon div {
+                padding: 8px 18px;
             }
-
-            #horizon li a {
-                padding: 5px 10px;
+            div a:hover{
+                cursor: pointer;
             }
             li a:hover{
                 cursor: pointer;
@@ -93,12 +92,12 @@
         <div id="lan">
             <a onclick="language()">語言</a>
         </div>
-        <ul id="horizon">
-            <li><a id="company">關於我們</a></li>
-            <li><a id="news" onclick="news()">最新消息</a></li>
-            <li><a id="product">產品簡介</a></li>
-            <li><a id="contact" onclick="contact()">聯絡我們</a></li>
-        </ul>
+        <div id="horizon">
+            <div id="company">關於我們</div>
+            <div id="news" onclick="news()">最新消息</div>
+            <div id="product"><a id="product">產品簡介</div>
+            <div id="contact" onclick="contact()">聯絡我們</div>
+        </div>
         <ul id="according"></ul>
         <ul id="formid"></ul>
         <div id="text">

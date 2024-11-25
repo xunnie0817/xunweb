@@ -1,176 +1,144 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>科技股份有限公司</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="OIP.jpg" type="image/jpg">
-        <style>
-            body{
-                margin: 0;
-                font-family: Arial, sans-serif;
-                font-size: 1rem;
-                line-height: 1.5;
+let timeoutId=null;
+let istext;
+let isacc;
+const company=document.getElementById('company');
+const according=document.getElementById('according');
+let isclick=false;
+const 簡介=document.getElementById('簡介');
+const 產品=document.getElementById('產品');
+const 沿革=document.getElementById('沿革');
+
+if(window.innerWidth>768){
+    company.addEventListener("mouseenter", () => {
+        clearTimeout(timeoutId); // 清除任何現存計時器
+        isacc = false; // 設置為非激活狀態
+        timeoutId = setTimeout(() => {
+            istext=false;
+            formid(false); // 隱藏其他區域
+            acc(true); // 顯示 according 區域
+        }, 200);
+    });
+    company.addEventListener("mouseleave", () => {
+        clearTimeout(timeoutId);
+        timeoutId=setTimeout(() => {
+            if(!isacc){
+                acc(false);
             }
-            #lan{
-                background-color: rgba(100, 100, 100, 1);
-                color: white;
-                text-align: right;
-                padding: 5px 10%;
+        }, 400);
+    });
+
+    
+    
+    function acc(open){
+        const according=document.getElementById('according');
+        if(open){
+            according.innerHTML='';
+            const items=[
+                {text:'公司簡介',action:introduce},
+                {text:'主要產品',action:mainproduct},
+                {text:'公司沿革',action:develope}
+            ]
+            items.forEach((item)=>{
+                const li = document.createElement("li");
+                li.textContent = item.text;
+                li.className='list';
+                li.onclick=item.action;
+                according.appendChild(li);
+            })
+            according.className='according';
+        }
+        else{
+            according.textContent='';
+            according.removeAttribute('class')
+        }
+    }
+    function introduce(){
+        window.location.href='公司簡介.html';
+    }
+    function mainproduct(){
+        window.location.href='主要產品.html';
+    }
+    function develope(){
+        window.location.href='公司沿革.html';
+    }
+    document.getElementById("product").addEventListener("mouseenter", () => {
+        clearTimeout(timeoutId);
+        istext=false;
+        timeoutId=setTimeout(() => {
+            isacc=false;
+            acc(false);
+            formid(true);
+        }, 200);
+    });
+    
+    document.getElementById("product").addEventListener("mouseleave", () => {
+        clearTimeout(timeoutId);
+        timeoutId=setTimeout(() => {
+            if(!istext){
+                formid(false);
             }
-            #horizon {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap; /* 讓元素在小螢幕換行 */
-                list-style-type: none;
-                background-color: rgba(200, 200, 200, 1);
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            #horizon div {
-                padding: 8px 18px;
-            }
-            #horizon div:hover{
-                cursor: pointer;
-            }
-            #text{
-                margin: 20px 10%;
-            }
-            #開頭{
-                margin-left: 10% ;
-                color: black;
-                font-size:200%;
-                font-weight: 600;
-            }
-            .content1,.content2{
-                display: block;
-                font-size: 1.1rem;
-                margin-right: 10%;
-                margin-left:10%;
-            }
-            #公司圖{
-                display: block;
-                width:100%;
-                max-width: 300px;
-                margin: 20px auto;
-                height: auto;
-            }
-            #company{
-                position: relative;
-            }
-            #according{
-                position: absolute;
-                background-color: red;
-                list-style-type: none;
-                margin-top: 0;
-                top: 100%;
-                left: 0;
-                padding:5% 10% 10% 20%;
-                width: 6vw;
-                height: 6vw;
-                line-height: 2rem;
-                border-radius: 1vw;
-            }
-            #according:empty{
-                display: none;
-            }
-            #product{
-                position: relative;
-            }
-            #formid{
-                position: absolute;
-                background-color: red;
-                list-style-type: none;
-                margin-top: 0;
-                top: 100%;
-                left: 0;
-                padding:10%;
-                width: 14vw;
-                height: 11vw;
-                line-height: 2rem;
-                border-radius: 1vw;
-            }
-            #formid:empty{
-                display: none;
-            }
-            .list:hover{
-                cursor: pointer;
-            }
-            .hidden {
-                background-color: rgba(150, 150, 150, 1);
-                display: none;
-            }
-            .according{
-                display: hidden;
-            }
-            #簡介{
-                background-color: aqua;
-            }
-            .accordingp{
-                display: none;
-            }
-            @media(max-width:768px){
-                #horizon{
-                    flex-direction: column;
-                }
-                #horizon div{
-                    border-bottom: 2px solid white;
-                }
-                #according,#formid{
-                    display: none;
-                }
-                .content1,.content2{
-                    font-size: 1rem;
-                    margin-right: 5%;
-                    margin-left: 5%;
-                }
-                #公司圖{
-                    max-width: 200px;
-                }
-                .according{
-                    display: none;
-                }
-                .hidden{
-                    display: block;
-                }
-            }
-            @media(max-width:480px){
-                #lan{
-                    text-align: center;
-                }
-                .content1,.content2{
-                    margin-left: 2%;
-                    margin-right: 2%;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div id="lan">
-            <a onclick="language()">語言</a>
-        </div>
-        <div id="horizon">
-            <div id="company">關於我們
-                <ul id="according"></ul>
-            </div>
-            <div class="hidden" id="簡介">公司簡介</div>
-            <div class="hidden" id="產品">主要產品</div>
-            <div class="hidden" id="沿革">公司沿革</div>
-            <div id="news" onclick="news()">最新消息</div>
-            <div id="product">產品簡介
-                <div class="" id="formid"></div>
-            </div>
-            <div id="contact" onclick="contact()">聯絡我們</div>
-        </div>
-        <div id="text">
-            <a id="開頭">公司簡介</a>
-            <img id="公司圖" src="co.jpg">
-            <a class="content1">鋐鑫電光科技股份有限公司(Elit Fine Ceramics CO., Ltd)成立於2005年3月，廠區位於桃園市楊梅區幼獅擴大工業區內，為一家專業精密陶瓷材料研發及產品製造公司。經營團隊深耕精密陶瓷材料科技30餘年，擁有自主的陶瓷複合材料開發技術、陶瓷生胚量產技術、多層陶瓷構裝技術及多層陶瓷生產設備設計開發技術，於2007年榮獲經濟部頒發中小企業創新奬。</a>
-            <a class="content2">因應產業環境改變，鋐鑫已從早期消費性電子、照明等LED產品，升級轉型往高門檻、高產值、高附加價值的尖端電化學陶瓷工藝技術發展，目前主力產品為氧傳感器與氮氧傳感器，其主要功能為偵測內燃機燃油效率與尾氣排放檢測，為全球少數幾家擁有傳感器從材料配方、生胚流延成形、多層陶瓷沖孔/印刷/結合/燒結、總成封裝量產技術的廠商之一。</a>
-            <a class="content2">由於鋐鑫在電化學陶瓷工藝技術的卓越表現，獲得國內外廠商一致肯定，陸續取得與國際大廠在醫療生技、高純氧製造、碳中和、潔淨能源等創新產品的合作機會。其中電化學陶瓷製氧機是目前正在進行的跨國合作項目，鋐鑫負責關鍵材料陶瓷製氧基板的生產，樣品機已通過客戶驗證，未來產品上市後可供應全球醫療與工業用高純度氧氣(純度99.99%)，切入高純氧氣製造與生技醫療市場。</a>
-            <a class="content2">傳感器與陶瓷製氧基板的開發成功奠定了鋐鑫在電化學陶瓷半導體材料產業永續發展的基礎，當前如何解決環境汙染是全世界急迫需要面對的課題，面對2050淨零排放的目標，各國已陸續制定嚴格的碳中和減碳目標與計畫時程表。由於電化學技術應用在碳中和及潔淨能源的發展有非常大機會，所以鋐鑫未來有更重大的願景與使命，尋求與國內外廠商共同合作，整合碳捕捉與電化學固體氧化物電解池 (SOEC) 技術，將 H2O、CO2 或H2O + CO2透過電化學技術分別轉化為 H2、CO 或 H2 + CO（合成氣）；或是透過一系列化學合成進行熱整合，使捕獲的 CO2 和水能夠再循環到合成天然氣或汽油、甲醇或氨等，除了可直接降低二氧化碳排放汙染外，更能進一步抑制使用化石原料所造成的環境汙染，還給大家一個乾淨的地球。</a>            
-        </div>
-        <script src="大型網站.js">
-        </script>
-    </body>
-</html>
+        }, 400);
+    });
+    
+    function formid(open) {
+        const formid = document.getElementById("formid");
+        if (open) {
+            formid.innerHTML = ""; // 清空内容
+            const items = [
+                { text: "氧體偵測傳感器", action: product1 },
+                { text: "陶瓷材料系統", action: product2 },
+                { text: "陶瓷製氧基板", action: product3 },
+                { text: "多層陶瓷量產設備", action: product4 },
+                { text: "多層構裝陶瓷基板與傳感器", action: product5 },
+            ];
+    
+            items.forEach((item) => {
+                const li = document.createElement("li");
+                li.textContent = item.text;
+                li.className='list';
+                li.onclick = item.action;
+                formid.appendChild(li);
+            });
+    
+            formid.className = "formid";
+        } else {
+            formid.innerHTML = "";
+            formid.removeAttribute("class");
+        }
+    }
+    function product1() {
+        window.location.href='氧體偵測傳感器.html';
+    }
+    
+    function product2() {
+        window.location.href='陶瓷材料系統.html';
+    }
+    
+    function product3() {
+        window.location.href='陶瓷製氧機板.html';
+    }
+    
+    function product4() {
+        window.location.href='多層陶瓷量產設備.html';
+    }
+    
+    function product5() {
+        window.location.href='多層構裝陶瓷基板與傳感器.html';
+    }
+}
+
+else{
+    company.addEventListener('click',()=>{
+        if(isclick){
+            簡介.classList.remove('accordingp');
+            產品.classList.remove('accordingp');
+            沿革.classList.remove('accordingp');
+        }
+        else{
+            簡介.classList.add('accordingp');
+            產品.classList.add('accordingp');
+            沿革.classList.add('accordingp');
+        }
+        isclick=!isclick;
+    })
+}

@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>科技股份有限公司</title>
-        <link rel="icon" href="OIP.jpg" type="image/jpg">
-        <style>
-            body{
-                margin: 0;
-            }
-            #lan{
-                position: fixed;
-                top: 0;
-                right: 0;
-                background-color: rgba(100, 100, 100, 1);
-                width: 100%;
-                color: white;
-                text-align: right;
-                padding: 5px 10%;
-            }
-            #horizon{
-                display: flex;
-                position: fixed;
-                list-style-type: none;
-                background-color: rgba(200, 200, 200, 1);
-                width: 100%;
-                top: 30px;
-                justify-content: center;
-                padding:0;
-                margin: 0;
-            }
-            li{
-                padding: 8px;
-            }
-            li a{
-                display: inline;
-                padding: 5px 10px;
-            }
-            li a:hover{
-                cursor: pointer;
-            }
-            .formid{
-                position: fixed;
-                top: 51px;
-                left: 20px;
-                max-height: 200px;
+<head>
+    <title>科技股份有限公司</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="OIP.jpg" type="image/jpg">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        #lan {
+            background-color: rgba(100, 100, 100, 1);
+            color: white;
+            text-align: right;
+            padding: 5px 10%;
+        }
+
+        #horizon {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            background-color: rgba(200, 200, 200, 1);
+            padding: 0;
+            margin: 0;
+        }
+
+        #horizon li {
+            padding: 8px;
+        }
+
+        #horizon li a {
+            padding: 5px 10px;
+        }
+
+        #text {
+            margin: 20px 10%;
+        }
+
+        #開頭 {
+            color: black;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .content1, .content2 {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        #公司圖 {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        @media (max-width: 768px) {
+            #horizon {
                 flex-direction: column;
-                list-style-type: none;
-                padding-left: 0;
-                padding: 5px;
-                max-width: 25%;
-                margin-left:46%;
-                margin-bottom: 30%;
-                border-radius:8px ; 
             }
-            .according{
-                position: fixed;
-                top: 51px;
-                padding-left: 0;
-                padding-right: 20px;
-                list-style-type: none;
-                margin-left:36%;
-                border-radius:8px ;               
+
+            .content1, .content2 {
+                margin: 0 5%;
+                font-size: 1rem;
             }
-            .list{
-                cursor: pointer;
-            }           
-        </style>
-    </head>
-    <body>
-        <div id="lan">
-            <a onclick="language()">語言</a>
-        </div>
-        <ul id="horizon">
-            <li><a id="company">關於我們</a></li>
-            <li><a id="news" onclick="news()">最新消息</a></li>
-            <li><a id="product">產品簡介</a></li>
-            <li><a id="contact" onclick="contact()">聯絡我們</a></li>
-        </ul>
-        <ul id="according"></ul>
-        <ul id="formid"></ul>
-        <script src="大型網站.js"></script>
-    </body>
+
+            #公司圖 {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #lan {
+                text-align: center;
+            }
+
+            .content1, .content2 {
+                margin: 0 2%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="lan">
+        <a onclick="language()">語言</a>
+    </div>
+    <ul id="horizon">
+        <li><a id="company">關於我們</a></li>
+        <li><a id="news" onclick="news()">最新消息</a></li>
+        <li><a id="product">產品簡介</a></li>
+        <li><a id="contact" onclick="contact()">聯絡我們</a></li>
+    </ul>
+    <div id="text">
+        <a id="開頭">公司簡介</a>
+        <img id="公司圖" src="co.jpg">
+        <a class="content1">這是一段範例內容，響應式設計讓它在所有設備上顯示良好。</a>
+        <a class="content2">這是另一段範例內容，適合任何螢幕大小。</a>
+    </div>
+</body>
 </html>

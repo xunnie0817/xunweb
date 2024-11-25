@@ -7,66 +7,40 @@
         <style>
             body{
                 margin: 0;
+                font-family: Arial, sans-serif;
+                font-size: 1rem;
+                line-height: 1.5;
             }
             #lan{
-                position: fixed;
-                top: 0;
-                right: 0;
                 background-color: rgba(100, 100, 100, 1);
-                width: 100%;
                 color: white;
                 text-align: right;
                 padding: 5px 10%;
             }
-            #horizon{
+            #horizon {
                 display: flex;
-                position: fixed;
+                justify-content: center;
+                flex-wrap: wrap; /* 讓元素在小螢幕換行 */
                 list-style-type: none;
                 background-color: rgba(200, 200, 200, 1);
                 width: 100%;
-                top: 30px;
-                justify-content: center;
-                padding:0;
                 margin: 0;
+                padding: 0;
             }
-            li{
+            #horizon li {
                 padding: 8px;
             }
-            li a{
-                display: inline;
+
+            #horizon li a {
+                display: inline-block;
                 padding: 5px 10px;
+                text-align: center;
             }
             li a:hover{
                 cursor: pointer;
             }
-            .formid{
-                position: fixed;
-                top: 51px;
-                left: 20px;
-                max-height: 200px;
-                flex-direction: column;
-                text-align: left;
-                list-style-type: none;
-                padding-left: 0;
-                padding: 5px;
-                max-width: 25%;
-                margin-left:46%;
-                margin-bottom: 30%;
-                border-radius:8px ;
-            }
-            .according{
-                position: fixed;
-                top: 51px;
-                padding-left: 0;
-                padding-right: 20px;
-                list-style-type: none;
-                margin-left:36%;
-                border-radius:8px ;               
-            }
             #text{
-                margin-top:20vh;
-                margin-left:20% ;
-                margin-right: 20%;
+                margin: 20px 10%;
             }
             #開頭{
                 padding-left: 15vh ;
@@ -74,36 +48,18 @@
                 font-size:200%;
                 font-weight: 600;
             }
-            .content1{
-                font-size: 110%;
+            .content1,.content2{
                 display: block;
-                line-height: 1.5;
-                margin-right: 65vh;
-                margin-left: 15vh;
-                margin-top:1vh ;
-            }
-            .content2{
-                font-size: 110%;
-                display: block;
-                line-height: 1.5;
-                margin-right: 20vh;
-                margin-left: 15vh;
-                margin-top:1vh ;
+                font-size: 1.1rem;
+                margin-right: 10%;
+                margin-left:10%;
             }
             #公司圖{
                 display: block;
-                float: right;
-                width:20vw;
-                padding-right:20vh ;
-                padding-top: 15vh;
-            }
-            .content3{
-                display: block;
-                margin-left: 70vh;
-                margin-top: 3vh;
-            }
-            .list:hover{
-                cursor: pointer;
+                width:100%;
+                max-width: 300px;
+                margin: 20px auto;
+                height: auto;
             }
         </style>
     </head>

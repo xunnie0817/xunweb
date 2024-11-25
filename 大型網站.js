@@ -128,9 +128,9 @@ if(window.innerWidth>768){
 }
 
 else{
-    簡介.click=profile;
-    產品.click=mainproduct;
-    沿革.click=develope;
+    簡介.onclick=profile;
+    產品.onclick=mainproduct;
+    沿革.onclick=develope;
     company.addEventListener('click',()=>{
         if(isclick){
             簡介.classList.remove('accordingp');

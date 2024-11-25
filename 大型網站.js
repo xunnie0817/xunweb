@@ -7,6 +7,7 @@ let isclick=false;
 const 簡介=document.getElementById('簡介');
 const 產品=document.getElementById('產品');
 const 沿革=document.getElementById('沿革');
+
 if(window.innerWidth>768){
     company.addEventListener("mouseenter", () => {
         clearTimeout(timeoutId); // 清除任何現存計時器
@@ -125,7 +126,11 @@ if(window.innerWidth>768){
         window.location.href='多層構裝陶瓷基板與傳感器.html';
     }
 }
+
 else{
+    簡介.click=profile;
+    產品.click=mainproduct;
+    沿革.click=develope;
     company.addEventListener('click',()=>{
         if(isclick){
             簡介.classList.remove('accordingp');
@@ -139,4 +144,13 @@ else{
         }
         isclick=!isclick;
     })
+    function profile(){
+        window.location.href='公司簡介.html';
+    }
+    function mainproduct(){
+        window.location.href='主要產品.html';
+    }
+    function develope(){
+        window.location.href='公司沿革.html';
+    }
 }

@@ -112,7 +112,7 @@
                 display: hidden;
             }
             .accordingp{
-                display: block;
+                display: none;
             }
             @media(max-width:768px){
                 #horizon{
@@ -158,7 +158,7 @@
             <a onclick="language()">語言</a>
         </div>
         <div id="horizon">
-            <div id="company">關於我們
+            <div id="company" onclick="fold()">關於我們
                 <ul id="according"></ul>
             </div>
             <div class="hidden" id="簡介">公司簡介</div>

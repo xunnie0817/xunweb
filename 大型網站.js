@@ -128,10 +128,11 @@ if(window.innerWidth>768){
 }
 
 else{
+    company.onclick=fold;
     簡介.onclick=profile;
     產品.onclick=mainproduct;
     沿革.onclick=develope;
-    company.addEventListener('click',()=>{
+    function fold(){
         if(isclick){
             簡介.classList.remove('accordingp');
             產品.classList.remove('accordingp');
@@ -143,7 +144,7 @@ else{
             沿革.classList.add('accordingp');
         }
         isclick=!isclick;
-    })
+    }
     function profile(){
         window.location.href='公司簡介.html';
     }

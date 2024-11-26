@@ -128,7 +128,6 @@ else{
     const product = document.getElementById('產品');
     const history = document.getElementById('沿革');
     const company = document.getElementById('company');
-    company.onclick=fold;
     intro.onclick=profile;
     product.onclick=mainproduct;
     history.onclick=develope;

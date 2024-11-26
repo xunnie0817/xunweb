@@ -2,103 +2,161 @@
 <html>
     <head>
         <title>科技股份有限公司</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="OIP.jpg" type="image/jpg">
         <style>
             body{
                 margin: 0;
+                font-family: Arial, sans-serif;
+                font-size: 1rem;
+                line-height: 1.5;
             }
             #lan{
-                position: fixed;
-                top: 0;
-                right: 0;
                 background-color: rgba(100, 100, 100, 1);
-                width: 100%;
                 color: white;
                 text-align: right;
                 padding: 5px 10%;
             }
-            #horizon{
+            #lan:hover{
+                cursor: pointer;
+            }
+            #horizon {
                 display: flex;
-                position: fixed;
+                justify-content: center;
+                flex-wrap: wrap; /* 讓元素在小螢幕換行 */
                 list-style-type: none;
                 background-color: rgba(200, 200, 200, 1);
                 width: 100%;
-                top: 30px;
-                justify-content: center;
-                padding:0;
                 margin: 0;
+                padding: 0;
             }
-            li{
-                padding: 8px;
+            #horizon div {
+                padding: 8px 18px;
             }
-            li a{
-                display: inline;
-                padding: 5px 10px;
-            }
-            li a:hover{
-                cursor: pointer;
-            }
-            .formid{
-                position: fixed;
-                top: 51px;
-                left: 20px;
-                max-height: 200px;
-                flex-direction: column;
-                list-style-type: none;
-                padding-left: 0;
-                padding: 5px;
-                max-width: 25%;
-                margin-left:46%;
-                margin-bottom: 30%;
-                border-radius:8px ; 
-            }
-            .according{
-                position: fixed;
-                top: 51px;
-                padding-left: 0;
-                padding-right: 20px;
-                list-style-type: none;
-                margin-left:36%;
-                border-radius:8px ;               
-            }
-            .list{
+            #horizon div:hover{
                 cursor: pointer;
             }
             #text{
-                margin-top:20vh;
-                margin-left:20% ;
-                margin-right: 18%;
+                margin: 20px 10%;
             }
             #開頭{
+                margin-left: 10% ;
                 color: black;
                 font-size:200%;
                 font-weight: 600;
-                padding-left: 15vh;
-            } 
+            }
             #content1{
                 display: block;
-                margin-left: 15vh;
-                font-size:110%;
-                line-height: 1.8;
-                margin-top: 1vh;
-            }   
+                font-size: 1.1rem;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            #company{
+                position: relative;
+            }
+            #according{
+                position: absolute;
+                background-color: red;
+                list-style-type: none;
+                margin-top: 0;
+                top: 100%;
+                left: 0;
+                padding:5% 10% 10% 20%;
+                width: 6vw;
+                height: 6vw;
+                line-height: 2rem;
+                border-radius: 1vw;
+            }
+            #according:empty{
+                display: none;
+            }
+            #product{
+                position: relative;
+            }
+            #formid{
+                position: absolute;
+                background-color: red;
+                list-style-type: none;
+                margin-top: 0;
+                top: 100%;
+                left: 0;
+                padding:10%;
+                width: 14vw;
+                height: 11vw;
+                line-height: 2rem;
+                border-radius: 1vw;
+            }
+            #formid:empty{
+                display: none;
+            }
+            .list:hover{
+                cursor: pointer;
+            }
+            .hidden {
+                background-color: rgba(150, 150, 150, 1);
+                display: none;
+            }
+            .according{
+                display: hidden;
+            }
+            #簡介{
+                background-color: aqua;
+            }
+            .accordingp{
+                display: none;
+            }
+            @media(max-width:768px){
+                #horizon{
+                    flex-direction: column;
+                }
+                #horizon div{
+                    border-bottom: 2px solid white;
+                }
+                #according,#formid{
+                    display: none;
+                }
+                #content1{
+                    font-size: 1rem;
+                    margin-left: 5%;
+                    margin-right: 5%;
+                }
+                .according{
+                    display: none;
+                }
+                .hidden{
+                    display: block;
+                }
+            }
+            @media(max-width:480px){
+                #content1{
+                    margin-left: 2%;
+                    margin-right: 2%;
+                }
+                #lan{
+                    text-align: center;
+                }
+            }
         </style>
     </head>
     <body>
         <div id="lan">
             <a onclick="language()">語言</a>
         </div>
-        <ul id="horizon">
-            <li><a id="company">關於我們</a></li>
-            <li><a id="news" onclick="news()">最新消息</a></li>
-            <li><a id="product">產品簡介</a></li>
-            <li><a id="contact" onclick="contact()">聯絡我們</a></li>
-        </ul>
-        <ul id="according"></ul>
-        <ul id="formid"></ul>
-        <script src="大型網站.js"></script>
+        <div id="horizon">
+            <div id="company">關於我們
+                <ul id="according"></ul>
+            </div>
+            <div class="hidden" id="簡介">公司簡介</div>
+            <div class="hidden" id="產品">主要產品</div>
+            <div class="hidden" id="沿革">公司沿革</div>
+            <div id="news" onclick="news()">最新消息</div>
+            <div id="product">產品簡介
+                <div class="" id="formid"></div>
+            </div>
+            <div id="contact" onclick="contact()">聯絡我們</div>
+        </div>
         <div id="text">
-            <a id="開頭">鋐鑫沿革</a>
+            <a id="開頭">公司沿革</a>
             <a id="content1">．2005年3月成立，當年度實收資本額為5仟8佰萬，完成量產型LTCC材料配方開發。<br>
                 ．2006年100W LTCC金屬構裝基板開發完成，並通過客戶認證出貨。<br>
                 ．2007年250W LED照明模組開發完成，並榮獲經濟部頒發最佳中小企業創新，實收資本額增為1億5仟8佰萬元。<br>
@@ -110,7 +168,9 @@
                 ．2016年寬域氧傳感器開發完成，並通過客戶認證出貨，實收資本額增為4億7仟萬元。<br>
                 ．2018年跨國技術合作案啟動，開發電化學陶瓷製氧機，負責陶瓷製氧基板開發。<br>
                 ．2019年氮氧傳感器開發完成，並通過客戶認證出貨。<br>
-                ．2022年電化學陶瓷製氧基板開發完成，客戶樣品機通過測試驗證。</a>
+                ．2022年電化學陶瓷製氧基板開發完成，客戶樣品機通過測試驗證。</a> 
         </div>
+        <script src="大型網站.js">
+        </script>
     </body>
 </html>

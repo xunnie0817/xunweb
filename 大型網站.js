@@ -123,6 +123,7 @@ if(window.innerWidth>768){
     }
 }
 else{
+    isclick=false;
     const intro = document.getElementById('簡介');
     const product = document.getElementById('產品');
     const history = document.getElementById('沿革');

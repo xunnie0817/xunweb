@@ -3,10 +3,6 @@ let istext;
 let isacc;
 const company=document.getElementById('company');
 const according=document.getElementById('according');
-let isclick=false;
-const 簡介=document.getElementById('簡介');
-const 產品=document.getElementById('產品');
-const 沿革=document.getElementById('沿革');
 
 if(window.innerWidth>768){
     company.addEventListener("mouseenter", () => {
@@ -126,22 +122,25 @@ if(window.innerWidth>768){
         window.location.href='多層構裝陶瓷基板與傳感器.html';
     }
 }
-
 else{
+    const intro = document.getElementById('簡介');
+    const product = document.getElementById('產品');
+    const history = document.getElementById('沿革');
+    const company = document.getElementById('company');
     company.onclick=fold;
-    簡介.onclick=profile;
-    產品.onclick=mainproduct;
-    沿革.onclick=develope;
+    intro.onclick=profile;
+    product.onclick=mainproduct;
+    history.onclick=develope;
     function fold(){
         if(isclick){
-            簡介.classList.remove('accordingp');
-            產品.classList.remove('accordingp');
-            沿革.classList.remove('accordingp');
+            intro.classList.remove('accordingp');
+            product.classList.remove('accordingp');
+            history.classList.remove('accordingp');
         }
         else{
-            簡介.classList.add('accordingp');
-            產品.classList.add('accordingp');
-            沿革.classList.add('accordingp');
+            intro.classList.add('accordingp');
+            product.classList.add('accordingp');
+            history.classList.add('accordingp');
         }
         isclick=!isclick;
     }

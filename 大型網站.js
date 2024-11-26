@@ -133,14 +133,14 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.classList.remove('accordingp');
-            product.classList.remove('accordingp');
-            history.classList.remove('accordingp');
+            intro.style.display='none';
+            product.style.display='none';
+            history.style.display='none';
         }
         else{
-            intro.classList.add('accordingp');
-            product.classList.add('accordingp');
-            history.classList.add('accordingp');
+            intro.style.display='block';
+            product.style.display='block';
+            history.style.display='block';
         }
         isclick=!isclick;
     }

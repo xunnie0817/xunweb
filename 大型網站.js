@@ -142,7 +142,7 @@ else{
         }
         else{
             intro.style.display='block';
-            intro.style.maxheight=into..scrollHeight + "px";
+            intro.style.maxheight=into.scrollHeight + "px";
             product.style.display='block';
             product.style.maxheight=product.scrollHeight + "px";
             history.style.display='block';

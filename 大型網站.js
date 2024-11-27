@@ -141,11 +141,11 @@ else{
         }
         else{
             intro.style.display='block';
-            intro.style.maxHeight=intro.scrollHeight + "px";
+            intro.style.maxHeight='1.5rem';
             product.style.display='block';
-            product.style.maxHeight=product.scrollHeight + "px";
+            product.style.maxHeight='1.5rem';
             history.style.display='block';
-            history.style.maxHeight=history.scrollHeight + "px";
+            history.style.maxHeight='1.5rem';
         }
         isclick=!isclick;
     }

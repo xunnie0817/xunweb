@@ -134,11 +134,11 @@ else{
     function fold(){
         if(isclick){
             intro.style.display='none';
-            intro.style.maxheight='null;
+            intro.style.maxheight=null;
             product.style.display='none';
-            product.style.maxheight='null;
+            product.style.maxheight=null;
             history.style.display='none';
-            history.style.maxheight='null;
+            history.style.maxheight=null;
         }
         else{
             intro.style.display='block';

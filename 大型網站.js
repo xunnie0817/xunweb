@@ -24,7 +24,6 @@ if(window.innerWidth>768){
     });
 
     
-    
     function acc(open){
         const according=document.getElementById('according');
         if(open){

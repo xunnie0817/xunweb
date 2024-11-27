@@ -134,19 +134,19 @@ else{
     function fold(){
         if(isclick){
             intro.style.display='none';
-            intro.style.maxheight=null;
+            intro.style.maxHeight=null;
             product.style.display='none';
-            product.style.maxheight=null;
+            product.style.maxHeight=null;
             history.style.display='none';
-            history.style.maxheight=null;
+            history.style.maxHeight=null;
         }
         else{
             intro.style.display='block';
-            intro.style.maxheight=into.scrollHeight + "px";
+            intro.style.maxHeight=intro.scrollHeight + "px";
             product.style.display='block';
-            product.style.maxheight=product.scrollHeight + "px";
+            product.style.maxHeight=product.scrollHeight + "px";
             history.style.display='block';
-            history.style.maxheight=history.scrollHeight + "px";
+            history.style.maxHeight=history.scrollHeight + "px";
         }
         isclick=!isclick;
     }

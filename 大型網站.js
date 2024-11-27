@@ -132,20 +132,20 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.style.display='none';
+            intro.style.display='block';
             intro.style.maxHeight=null;
-            product.style.display='none';
+            product.style.display='block';
             product.style.maxHeight=null;
-            history.style.display='none';
+            history.style.display='block';
             history.style.maxHeight=null;
         }
         else{
-            intro.style.display='block';
-            intro.style.maxHeight='1.5rem';
-            product.style.display='block';
-            product.style.maxHeight='1.5rem';
-            history.style.display='block';
-            history.style.maxHeight='1.5rem';
+            intro.style.display='none';
+            intro.style.maxHeight='0';
+            product.style.display='none';
+            product.style.maxHeight='0';
+            history.style.display='none';
+            history.style.maxHeight='0';
         }
         isclick=!isclick;
     }

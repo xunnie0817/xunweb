@@ -134,13 +134,19 @@ else{
     function fold(){
         if(isclick){
             intro.style.display='none';
+            intro.style.maxheight='null;
             product.style.display='none';
+            product.style.maxheight='null;
             history.style.display='none';
+            history.style.maxheight='null;
         }
         else{
             intro.style.display='block';
+            intro.style.maxheight=into..scrollHeight + "px";
             product.style.display='block';
+            product.style.maxheight=product.scrollHeight + "px";
             history.style.display='block';
+            history.style.maxheight=history.scrollHeight + "px";
         }
         isclick=!isclick;
     }

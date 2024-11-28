@@ -123,7 +123,7 @@ if(window.innerWidth>768){
     }
 }
 else{
-    isclick=true;
+    isclick=false;
     const intro = document.getElementById('簡介');
     const product = document.getElementById('產品');
     const history = document.getElementById('沿革');
@@ -133,14 +133,14 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.classList.add('accordingp');
-            product.classList.add('accordingp');
-            history.classList.add('accordingp');
+            intro.style.display='block';
+            product.style.display='block';
+            history.style.display='block';
         }
         else{
-            intro.classList.remove('accordingp');
-            product.classList.remove('accordingp');
-            history.classList.remove('accordingp');
+            intro.style.display='none';
+            product.style.display='none';
+            history.style.display='none';
         }
         isclick=!isclick;
     }

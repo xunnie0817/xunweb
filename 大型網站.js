@@ -138,11 +138,11 @@ else{
                 item.style.maxHeight='0';
                 setTimeout(() => {
                     item.classList.remove('active'); // 完全折疊後隱藏
-                }, 300);
+                }, 600);
             }
             else{
-                item.classList.add('active');
                 item.style.maxHeight='1.5rem';
+                item.classList.add('active');
             }
         })
         isclick=!isclick;

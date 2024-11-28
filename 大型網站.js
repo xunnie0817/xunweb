@@ -146,9 +146,11 @@ else{
             intro.style.display='block';
             product.style.display='block';
             history.style.display='block';
+            setTimeout(()=>{
             intro.style.maxHeight='1.5rem';
             product.style.maxHeight='1.5rem';
             history.style.maxHeight='1.5rem';
+            },400);
         }
         isclick=!isclick;
     }

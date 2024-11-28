@@ -133,9 +133,9 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.style.maxHeight=null;
-            product.style.maxHeight=null;
-            history.style.maxHeight=null;
+            intro.style.maxHeight='0';
+            product.style.maxHeight='0';
+            history.style.maxHeight='0';
         }
         else{
             intro.style.maxHeight='1.5rem';

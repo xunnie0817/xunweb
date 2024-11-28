@@ -5,10 +5,6 @@ const company=document.getElementById('company');
 const according=document.getElementById('according');
 
 if(window.innerWidth>768){
-    document.getElementById('簡介').className='hidden';
-    document.getElementById('產品').className='hidden';
-    document.getElementById('沿革').className='hidden';
-
     company.addEventListener("mouseenter", () => {
         clearTimeout(timeoutId); // 清除任何現存計時器
         isacc = false; // 設置為非激活狀態
@@ -128,34 +124,26 @@ if(window.innerWidth>768){
 }
 else{
     isclick=true;
+    const intro = document.getElementById('簡介');
+    const product = document.getElementById('產品');
+    const history = document.getElementById('沿革');
     const company = document.getElementById('company');
     intro.onclick=profile;
     product.onclick=mainproduct;
     history.onclick=develope;
-    function fold() {
-    const intro = document.getElementById('簡介');
-    const product = document.getElementById('產品');
-    const history = document.getElementById('沿革');
-
-    const items = [intro, product, history];
-
-    if (isclick) {
-        items.forEach(item => {
-            item.style.maxHeight = '0';
-            item.style.overflow = 'hidden';
-            setTimeout(() => {
-                item.style.display = 'none'; // 隱藏元素
-            }, 300); // 動畫完成後隱藏
-        });
-    } else {
-        items.forEach(item => {
-            item.style.display = 'block'; // 顯示元素
-            item.style.maxHeight = item.scrollHeight + 'px'; // 展開
-        });
+    function fold(){
+        if(isclick){
+            intro.classList.add('accordingp');
+            product.classList.add('accordingp');
+            history.classList.add('accordingp');
+        }
+        else{
+            intro.classList.remove('accordingp');
+            product.classList.remove('accordingp');
+            history.classList.remove('accordingp');
+        }
+        isclick=!isclick;
     }
-    isclick = !isclick;
-}
-
     function profile(){
         window.location.href='公司簡介.html';
     }

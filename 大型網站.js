@@ -22,6 +22,8 @@ if(window.innerWidth>768){
             }
         }, 400);
     });
+
+    
     
     function acc(open){
         const according=document.getElementById('according');
@@ -130,12 +132,9 @@ else{
     product.onclick=mainproduct;
     history.onclick=develope;
     function fold(){
-        const items=[
-            intro,
-            product,
-            company]
+        const items=[intro,product,history]
         items.forEach((item)=>{
-            if(item.classList.contains('active')){
+            if(isclick){
                 item.style.maxHeight='0';
                 setTimeout(() => {
                     item.classList.remove('active'); // 完全折疊後隱藏
@@ -146,6 +145,7 @@ else{
                 item.style.maxHeight='1.5rem';
             }
         })
+        isclick=!isclick;
     }
     function profile(){
         window.location.href='公司簡介.html';

@@ -137,20 +137,18 @@ else{
             product.style.maxHeight=null;
             history.style.maxHeight=null;
             setTimeout(()=>{
-                intro.style.display='none';
-                product.style.display='none';
-                history.style.display='none';
-            },400);
+                intro.classList.add('accordingp');
+                product.classList.add('accordingp');
+                history.classList.add('accordingp');
+            },300);
         }
         else{
-            intro.style.display='block';
-            product.style.display='block';
-            history.style.display='block';
-            setTimeout(()=>{
+            intro.classList.remove('accordingp');
+            product.classList.remove('accordingp');
+            history.classList.remove('accordingp');
             intro.style.maxHeight='1.5rem';
             product.style.maxHeight='1.5rem';
             history.style.maxHeight='1.5rem';
-            },400);
         }
         isclick=!isclick;
     }

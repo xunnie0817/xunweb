@@ -22,8 +22,6 @@ if(window.innerWidth>768){
             }
         }, 400);
     });
-
-    
     
     function acc(open){
         const according=document.getElementById('according');

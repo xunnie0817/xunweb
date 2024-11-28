@@ -136,6 +136,7 @@ else{
             intro.style.maxHeight=null;
             product.style.maxHeight=null;
             history.style.maxHeight=null;
+        }
         else{
             intro.style.maxHeight='1.5rem';
             product.style.maxHeight='1.5rem';

@@ -138,11 +138,11 @@ else{
         items.forEach((item)=>{
             if(isclick){
                 item.style.maxHeight='1.5rem';
-                item.classList.add('accordingp');
+                item.classList.remove('accordingp');
             }
             else{
                 item.style.maxHeight='0';
-                item.classList.remove('accordingp');
+                item.classList.add('accordingp');
             }
         })
         isclick=!isclick;

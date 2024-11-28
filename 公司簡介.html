@@ -106,6 +106,10 @@
             .according{
                 display: hidden;
             }
+            .accordingp{
+                padding: 0;
+                visibility: hidden;
+            }
             #簡介{
                 background-color: aqua;
             }
@@ -130,14 +134,15 @@
                 .according{
                     display: none;
                 }
-                .accordingp{
-                    display:none;
-                }
                 .hidden{
-                    display: block;
-                    max-height:1.5rem;
+                    max-height:0;
                     overflow: hidden;
                     transition: max-height 0.5s ease-out;
+                    display:none;
+                }
+                .hidden.active{
+                    display: block;
+                    max-height: 1.5rem;
                 }
             }
             @media(max-width:480px){

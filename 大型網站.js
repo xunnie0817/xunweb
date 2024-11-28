@@ -133,7 +133,7 @@ else{
     history.onclick=develope;
     function fold(){
         const items=[
-            {intro,product,history}
+            intro,product,history
         ]
         items.forEach((item)=>{
             if(isclick){

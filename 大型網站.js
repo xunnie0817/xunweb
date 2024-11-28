@@ -137,8 +137,8 @@ else{
         ]
         items.forEach((item)=>{
             if(isclick){
-                item.style.maxHeight='1.5rem';
                 item.classList.remove('accordingp');
+                item.style.maxHeight='1.5rem';
             }
             else{
                 item.style.maxHeight='0';

@@ -131,10 +131,9 @@ else{
     history.onclick=develope;
     function fold(){
         const items=[
-            {intro},
-            {product},
-            {company}
-        ]
+            intro,
+            product,
+            company]
         items.forEach((item)=>{
             if(item.classList.contains('active')){
                 item.style.maxHeight='0';

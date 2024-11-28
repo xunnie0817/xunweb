@@ -133,11 +133,8 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.style.display='none';
             intro.style.maxHeight=null;
-            product.style.display='none';
             product.style.maxHeight=null;
-            history.style.display='none';
             history.style.maxHeight=null;
         }
         else{

@@ -5,6 +5,10 @@ const company=document.getElementById('company');
 const according=document.getElementById('according');
 
 if(window.innerWidth>768){
+    document.getElementById('簡介').className='hidden';
+    document.getElementById('產品').className='hidden';
+    document.getElementById('沿革').className='hidden';
+
     company.addEventListener("mouseenter", () => {
         clearTimeout(timeoutId); // 清除任何現存計時器
         isacc = false; // 設置為非激活狀態

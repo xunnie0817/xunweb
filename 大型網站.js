@@ -133,12 +133,12 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.style.maxHeight='0';
             intro.style.display='none';
-            product.style.maxHeight='0';
+            intro.style.maxHeight=null;
             product.style.display='none';
-            history.style.maxHeight='0';
+            product.style.maxHeight=null;
             history.style.display='none';
+            history.style.maxHeight=null;
         }
         else{
             intro.style.display='block';

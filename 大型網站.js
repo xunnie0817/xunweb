@@ -140,7 +140,7 @@ else{
                 intro.style.display='none';
                 product.style.display='none';
                 history.style.display='none';
-            })
+            }300);
         }
         else{
             intro.style.display='block';

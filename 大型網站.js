@@ -132,16 +132,19 @@ else{
     product.onclick=mainproduct;
     history.onclick=develope;
     function fold(){
-        if(isclick){
-            intro.style.display='block';
-            product.style.display='block';
-            history.style.display='block';
-        }
-        else{
-            intro.style.display='none';
-            product.style.display='none';
-            history.style.display='none';
-        }
+        const items=[
+            {intro,product,history}
+        ]
+        items.forEach((item)=>{
+            if(isclick){
+                item.style.maxHeight='1.5rem';
+                item.classList.add('accordingp');
+            }
+            else{
+                item.style.maxHeight='0';
+                item.classList.remove('accordingp');
+            }
+        })
         isclick=!isclick;
     }
     function profile(){

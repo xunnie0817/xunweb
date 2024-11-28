@@ -24,6 +24,7 @@ if(window.innerWidth>768){
     });
 
     
+    
     function acc(open){
         const according=document.getElementById('according');
         if(open){
@@ -132,20 +133,20 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.style.display='block';
-            intro.style.maxHeight='1.5rem';
-            product.style.display='block';
-            product.style.maxHeight='1.5rem';
-            history.style.display='block';
-            history.style.maxHeight='1.5rem';
-        }
-        else{
             intro.style.display='none';
             intro.style.maxHeight=null;
             product.style.display='none';
             product.style.maxHeight=null;
             history.style.display='none';
             history.style.maxHeight=null;
+        }
+        else{
+            intro.style.display='block';
+            intro.style.maxHeight='1.5rem';
+            product.style.display='block';
+            product.style.maxHeight='1.5rem';
+            history.style.display='block';
+            history.style.maxHeight='1.5rem';
         }
         isclick=!isclick;
     }

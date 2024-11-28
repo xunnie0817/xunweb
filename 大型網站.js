@@ -134,11 +134,8 @@ else{
     function fold(){
         if(isclick){
             intro.style.maxHeight=null;
-            intro.style.display='none';
             product.style.maxHeight=null;
-            product.style.display='none';
             history.style.maxHeight=null;
-            history.style.display='none';
         else{
             intro.style.maxHeight='1.5rem';
             product.style.maxHeight='1.5rem';

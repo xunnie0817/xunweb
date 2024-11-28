@@ -136,11 +136,9 @@ else{
             intro.style.maxHeight=null;
             product.style.maxHeight=null;
             history.style.maxHeight=null;
-            setTimeout(()=>{
-                intro.classList.add('accordingp');
-                product.classList.add('accordingp');
-                history.classList.add('accordingp');
-            },300);
+            intro.classList.add('accordingp');
+            product.classList.add('accordingp');
+            history.classList.add('accordingp');
         }
         else{
             intro.classList.remove('accordingp');

@@ -136,6 +136,11 @@ else{
             intro.style.maxHeight=null;
             product.style.maxHeight=null;
             history.style.maxHeight=null;
+            setTimeout(()=>{
+                intro.style.display='none';
+                product.style.display='none';
+                history.style.display='none';
+            })
         }
         else{
             intro.style.display='block';

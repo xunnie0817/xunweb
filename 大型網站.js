@@ -133,19 +133,20 @@ else{
     history.onclick=develope;
     function fold(){
         const items=[
-            intro,product,history
+            {intro,product,history}
         ]
         items.forEach((item)=>{
-            if(isclick){
-                item.classList.remove('accordingp');
-                item.style.maxHeight='1.5rem';
+            if(item.classList.contains('active')){
+                item.style.maxHeight='0';
+                setTimeout(() => {
+                    item.classList.remove('active'); // 完全折疊後隱藏
+                }, 300);
             }
             else{
-                item.style.maxHeight='0';
-                item.classList.add('accordingp');
+                item.classList.add('active');
+                item.style.maxHeight='1.5rem';
             }
         })
-        isclick=!isclick;
     }
     function profile(){
         window.location.href='公司簡介.html';

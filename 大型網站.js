@@ -131,9 +131,6 @@ else{
     intro.onclick=profile;
     product.onclick=mainproduct;
     history.onclick=develope;
-    window.onload=()=>{
-        fold();
-    }
     function fold(){
         if(isclick){
             intro.style.display='none';

@@ -128,32 +128,34 @@ if(window.innerWidth>768){
 }
 else{
     isclick=true;
-    const intro = document.getElementById('簡介');
-    const product = document.getElementById('產品');
-    const history = document.getElementById('沿革');
     const company = document.getElementById('company');
     intro.onclick=profile;
     product.onclick=mainproduct;
     history.onclick=develope;
-    function fold(){
-        if(isclick){
-            intro.style.maxHeight=null;
-            product.style.maxHeight=null;
-            history.style.maxHeight=null;
-            intro.classList.add('accordingp');
-            product.classList.add('accordingp');
-            history.classList.add('accordingp');
-        }
-        else{
-            intro.classList.remove('accordingp');
-            product.classList.remove('accordingp');
-            history.classList.remove('accordingp');
-            intro.style.maxHeight='1.5rem';
-            product.style.maxHeight='1.5rem';
-            history.style.maxHeight='1.5rem';
-        }
-        isclick=!isclick;
+    function fold() {
+    const intro = document.getElementById('簡介');
+    const product = document.getElementById('產品');
+    const history = document.getElementById('沿革');
+
+    const items = [intro, product, history];
+
+    if (isclick) {
+        items.forEach(item => {
+            item.style.maxHeight = '0';
+            item.style.overflow = 'hidden';
+            setTimeout(() => {
+                item.style.display = 'none'; // 隱藏元素
+            }, 300); // 動畫完成後隱藏
+        });
+    } else {
+        items.forEach(item => {
+            item.style.display = 'block'; // 顯示元素
+            item.style.maxHeight = item.scrollHeight + 'px'; // 展開
+        });
     }
+    isclick = !isclick;
+}
+
     function profile(){
         window.location.href='公司簡介.html';
     }

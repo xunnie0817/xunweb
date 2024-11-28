@@ -133,9 +133,12 @@ else{
     history.onclick=develope;
     function fold(){
         if(isclick){
-            intro.style.maxHeight=null;
-            product.style.maxHeight=null;
-            history.style.maxHeight=null;
+            intro.style.maxHeight='0';
+            intro.style.display='none';
+            product.style.maxHeight='0';
+            product.style.display='none';
+            history.style.maxHeight='0';
+            history.style.display='none';
         }
         else{
             intro.style.display='block';

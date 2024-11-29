@@ -147,7 +147,6 @@ else{
                 item.classList.add('active');
                 setTimeout(() => {
                     item.style.maxHeight = '1.5rem';
-                    item.style.padding = null;
                 }, 10);
             }
         })

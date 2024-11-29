@@ -136,6 +136,7 @@ else{
         items.forEach((item)=>{
             if(isclick){
                 item.style.maxHeight='0';
+                item.style.padding='0 18px';
                 setTimeout(() => {
                     item.classList.remove('active');
                     item.style.display='none';
@@ -145,6 +146,7 @@ else{
                 item.style.display='block';
                 item.classList.add('active');
                 setTimeout(() => {
+                    item.style.padding='8 18px';
                     item.style.maxHeight = '1.5rem';
                 }, 10);
             }

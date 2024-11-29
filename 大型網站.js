@@ -136,13 +136,19 @@ else{
         items.forEach((item)=>{
             if(isclick){
                 item.style.maxHeight='0';
+                item.style.padding='0';
                 setTimeout(() => {
-                    item.classList.remove('active'); // 完全折疊後隱藏
+                    item.classList.remove('active');
+                    item.style.display='none';
                 }, 600);
             }
             else{
-                item.style.maxHeight='1.5rem';
+                item.style.display='block';
                 item.classList.add('active');
+                setTimeout(() => {
+                    item.style.maxHeight = section.scrollHeight + 'px';
+                    item.style.padding = null;
+                }, 10);
             }
         })
         isclick=!isclick;

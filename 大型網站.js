@@ -146,7 +146,7 @@ else{
                 item.style.display='block';
                 item.classList.add('active');
                 setTimeout(() => {
-                    item.style.maxHeight = section.scrollHeight + 'px';
+                    item.style.maxHeight = '1.5rem';
                     item.style.padding = null;
                 }, 10);
             }

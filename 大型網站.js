@@ -131,6 +131,9 @@ else{
     intro.onclick=profile;
     product.onclick=mainproduct;
     history.onclick=develope;
+    window.onload=function(){
+        fold();
+    }
     function fold(){
         const items=[intro,product,history]
         items.forEach((item)=>{

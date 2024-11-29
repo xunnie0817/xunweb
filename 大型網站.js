@@ -139,7 +139,7 @@ else{
                 setTimeout(() => {
                     item.classList.remove('active');
                     item.style.display='none';
-                }, 600);
+                }, 500);
             }
             else{
                 item.style.display='block';

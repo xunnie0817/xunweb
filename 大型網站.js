@@ -140,7 +140,7 @@ else{
                 setTimeout(() => {
                     item.classList.remove('active');
                     item.style.display='none';
-                }, 500);
+                }, 600);
             }
             else{
                 item.style.display='block';

@@ -136,7 +136,6 @@ else{
         items.forEach((item)=>{
             if(isclick){
                 item.style.maxHeight='0';
-                item.style.padding='0';
                 setTimeout(() => {
                     item.classList.remove('active');
                     item.style.display='none';

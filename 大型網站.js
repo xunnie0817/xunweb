@@ -140,14 +140,14 @@ else{
                 setTimeout(() => {
                     item.classList.remove('active');
                     item.style.display='none';
-                }, 600);
+                }, 500);
             }
             else{
                 item.style.display='block';
                 item.classList.add('active');
                 setTimeout(() => {
-                    item.style.padding='8 18px';
-                    item.style.maxHeight = '1.5rem';
+                    item.style.maxHeight = item.scrollHeight+'px';
+                    item.style.padding = '8px 18px';
                 }, 10);
             }
         })

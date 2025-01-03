@@ -121,7 +121,14 @@
                     display: none;
                 }
                 .hidden{
+                    max-height:0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+                    display:none;
+                }
+                .hidden.active{
                     display: block;
+                    max-height: 1.5rem;
                 }
             }
             @media(max-width:480px){
